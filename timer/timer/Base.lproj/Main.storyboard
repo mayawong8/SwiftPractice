@@ -16,34 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGD-WR-u6j">
-                                <rect key="frame" x="107" y="106" width="271" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-Un-93k">
-                                <rect key="frame" x="-134" y="210" width="414" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-Un-93k">
+                                <rect key="frame" x="288" y="210" width="60" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="START"/>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VV-VQ-hbQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-5N-XTZ">
-                                <rect key="frame" x="107" y="210" width="414" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-5N-XTZ">
+                                <rect key="frame" x="107" y="210" width="59" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="RESET"/>
                                 <connections>
                                     <action selector="ResetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWZ-be-cVU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGD-WR-u6j">
+                                <rect key="frame" x="162" y="112" width="271" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zH0-Un-93k" firstAttribute="centerY" secondItem="gWH-5N-XTZ" secondAttribute="centerY" id="Cck-63-f9c"/>
+                            <constraint firstItem="NGD-WR-u6j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IFd-hP-1Xo"/>
+                            <constraint firstItem="NGD-WR-u6j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="KtR-ej-M5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zH0-Un-93k" secondAttribute="trailing" constant="66" id="NIB-xX-Dbs"/>
+                            <constraint firstItem="gWH-5N-XTZ" firstAttribute="leading" secondItem="zH0-Un-93k" secondAttribute="trailing" constant="-173" id="Wvm-cS-sgA"/>
+                            <constraint firstItem="gWH-5N-XTZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="oAu-7z-naH"/>
+                            <constraint firstItem="gWH-5N-XTZ" firstAttribute="top" secondItem="NGD-WR-u6j" secondAttribute="bottom" constant="80" id="rFq-I5-VmN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ResetBtn" destination="gWH-5N-XTZ" id="UtD-Wk-rVB"/>
